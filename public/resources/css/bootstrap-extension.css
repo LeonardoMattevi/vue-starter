@@ -1,0 +1,10 @@
+.w-sm-50 {
+    width: 100%;
+}
+
+
+@media (min-width: 576px) {
+    .w-sm-50 {
+        width: 50%;
+    }
+}
