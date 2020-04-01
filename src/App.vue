@@ -8,22 +8,23 @@
         </span>
         <app-menu />
       </aside>
-      <div class="d-flex flex-column w-100 bg-light">
+      <div class="d-flex flex-column w-100">
         <app-header />
         <main style="min-height: calc(100vh - 131px);">
           <div class="container-fluid p-4">
             <router-view />
           </div>
         </main>
-        <footer class="bg-secondary p-3">footer</footer>
+        <AppFooter />
       </div>
     </div>
   </div>
 </template>
 <script>
-import AppMenu from "@/components/shared/appMenu.vue";
-import AppMessages from "@/components/shared/appMessages.vue";
-import AppHeader from "@/components/shared/header/appHeader.vue";
+import AppMenu from "@/components/layout/aside/appMenu.vue";
+import AppMessages from "@/components/layout/appMessages.vue";
+import AppHeader from "@/components/layout/header/appHeader.vue";
+import AppFooter from "@/components/layout/footer/appFooter.vue";
 
 export default {
   mounted() {
@@ -44,7 +45,11 @@ export default {
   components: {
     AppMessages,
     AppMenu,
-    AppHeader
+    AppHeader,
+    AppFooter
+  },
+  errorCaptured(err, vm, info) {
+    console.log(err, vm, info);
   }
 };
 </script>
