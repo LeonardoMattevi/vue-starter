@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown">
+  <div class="dropdown" v-click-outside="closeDropdown">
     <span class="nav-link dropdown-toggle" @click="showBody=!showBody" style="cursor: pointer;">
       <slot name="label"></slot>
     </span>
@@ -12,9 +12,14 @@
 
 <script>
 export default {
-  name: "CmpSelector",
+  name: "CmpDropdown",
   props: {
     showBody: { type: Boolean, default: false }
+  },
+  methods: {
+    closeDropdown() {
+      this.showBody = false;
+    }
   }
 };
 </script>

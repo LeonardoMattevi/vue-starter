@@ -40,7 +40,7 @@
 
     <!-- Nav Item - Alerts -->
     <li class="nav-item">
-      <cmp-selector>
+      <cmp-dropdown>
         <template v-slot:label>
           <i class="fas fa-bell fa-fw"></i>
           <!-- Counter - Alerts -->
@@ -75,12 +75,12 @@
           </a>
           <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
         </template>
-      </cmp-selector>
+      </cmp-dropdown>
     </li>
 
     <!-- Nav Item - Messages -->
     <li class="nav-item mx-1">
-      <cmp-selector>
+      <cmp-dropdown>
         <template v-slot:label>
           <i class="fas fa-envelope fa-fw"></i>
           <span class="badge badge-danger badge-counter">7</span>
@@ -121,14 +121,14 @@
           </a>
           <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
         </template>
-      </cmp-selector>
+      </cmp-dropdown>
     </li>
 
     <div class="topbar-divider d-none d-sm-block"></div>
 
     <!-- Nav Item - User Information -->
     <li class="nav-item mx-1">
-      <cmp-selector>
+      <cmp-dropdown>
         <template v-slot:label>
           <span class="mr-2 d-none d-lg-inline small">Leonardo Mattevi</span>&nbsp;
           <span class="border border-secondary rounded-circle alg-user-align">
@@ -154,20 +154,20 @@
             Logout
           </a>
         </template>
-      </cmp-selector>
+      </cmp-dropdown>
     </li>
   </ul>
 </template>
 
 <script>
-import CmpSelector from "@/components/shared/CmpSelector.vue";
+import CmpDropdown from "@/components/shared/CmpDropdown.vue";
 export default {
   name: "HeaderToolbar",
   data() {
     return {};
   },
   components: {
-    CmpSelector
+    CmpDropdown
   }
 };
 </script>
