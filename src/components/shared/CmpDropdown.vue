@@ -1,10 +1,14 @@
 <template>
   <div class="dropdown" v-click-outside="closeDropdown">
-    <span class="nav-link dropdown-toggle" @click="showBody=!showBody" style="cursor: pointer;">
+    <span
+      class="nav-link dropdown-toggle"
+      @click="privShowBody=!privShowBody"
+      style="cursor: pointer;"
+    >
       <slot name="label"></slot>
     </span>
     <!-- Dropdown - User Information -->
-    <div class="dropdown-menu dropdown-menu-right shadow" :class="{'show': showBody}">
+    <div class="dropdown-menu dropdown-menu-right shadow" :class="{'show': privShowBody}">
       <slot name="body"></slot>
     </div>
   </div>
@@ -16,9 +20,14 @@ export default {
   props: {
     showBody: { type: Boolean, default: false }
   },
+  data() {
+    return {
+      privShowBody: this.showBody
+    };
+  },
   methods: {
     closeDropdown() {
-      this.showBody = false;
+      this.privShowBody = false;
     }
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-nav">
     <router-link to="/" class="d-flex p-3 align-items-center">
-      <img class="ml-3" width="80%" src="/resources/img/logo.png" title="Company logo" />
+      <img class="ml-3" width="80%" src="../../../assets/logo.png" title="Company logo" />
     </router-link>
 
     <hr class="sidebar-divider my-0" />
