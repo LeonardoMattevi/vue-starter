@@ -2,9 +2,9 @@
   <div id="app">
     <app-messages />
     <div class="d-flex">
-      <aside class="bg-primary position-relative" :class="{ 'opened': asideIsOpened }">
+      <aside id="aside-menu-box" class="bg-primary" :class="{ 'opened': asideIsOpened }">
         <span v-show="appIsFetching" style="position:absolute;right:10px;top:10px;z-index:3334">
-          <i class="fa fa-spinner fa-spin"></i>
+          <i class="fa fa-spinner fa-spin text-white"></i>
         </span>
         <app-menu />
       </aside>
