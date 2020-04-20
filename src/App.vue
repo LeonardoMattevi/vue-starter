@@ -49,7 +49,8 @@ export default {
     AppFooter
   },
   errorCaptured(err, vm, info) {
-    console.log(err, vm, info);
+    window["console"]["log"]("errorCaptured: ", err, vm, info);
+    throw err;
   }
 };
 </script>
